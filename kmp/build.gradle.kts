@@ -10,9 +10,9 @@ plugins {
 
 kotlin {
 
-    androidLibrary {
+    android {
         compileSdk = libs.versions.compileSdk.get().toInt()
-        namespace = "com.example.kmp"
+        namespace = "com.splitbill.kmp"
         compilerOptions {
             jvmTarget = JvmTarget.JVM_11 // Max supported version for Android
         }
@@ -46,12 +46,12 @@ kotlin {
 
 compose.resources {
     publicResClass = true
-    packageOfResClass = "com.example.kmp"
+    packageOfResClass = "com.splitbill.kmp"
     generateResClass = always
 }
 
 compose.desktop {
     application {
-        mainClass = "comp.example.kmp.MainKt"
+        mainClass = "com.splitbill.kmp.MainKt"
     }
 }

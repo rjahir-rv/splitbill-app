@@ -13,14 +13,14 @@ kotlin {
 }
 
 android {
-    namespace = "com.example.kmp"
+    namespace = "com.splitbill.app"
     compileSdk = libs.versions.compileSdk.get().toInt()
 
     defaultConfig {
         targetSdk = libs.versions.compileSdk.get().toInt()
         minSdk = libs.versions.minSdk.get().toInt()
 
-        applicationId = "com.example.kmp"
+        applicationId = "com.splitbill.app"
         versionName = "1.0.0"
         versionCode = 1
     }
