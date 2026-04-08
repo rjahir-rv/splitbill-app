@@ -4,8 +4,6 @@ kotlin = "2.3.20"
 
 # Android
 agp = "9.1.0"
-compileSdk = "36"
-minSdk = "30"
 activity = "1.13.0"
 material = "1.13.0"
 
@@ -26,6 +24,8 @@ compose-components-resources = { module = "org.jetbrains.compose.components:comp
 # Android
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activity" }
 material = { module = "com.google.android.material:material", version.ref = "material" }
+ui-tooling = { module = "org.jetbrains.compose.ui:ui-tooling", version.ref = "compose" }
+ui-tooling-preview = { module = "org.jetbrains.compose.ui:ui-tooling-preview", version.ref = "compose" }
 
 
 [plugins]

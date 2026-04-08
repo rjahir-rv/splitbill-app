@@ -14,14 +14,14 @@ kotlin {
 
 android {
     namespace = "com.splitbill.app"
-    compileSdk = libs.versions.compileSdk.get().toInt()
+    compileSdk = 36
 
     defaultConfig {
-        targetSdk = libs.versions.compileSdk.get().toInt()
-        minSdk = libs.versions.minSdk.get().toInt()
+        targetSdk = 36
+        minSdk = 30
 
         applicationId = "com.splitbill.app"
-        versionName = "1.0.0"
+        versionName = "1.0"
         versionCode = 1
     }
 

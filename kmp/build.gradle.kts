@@ -1,3 +1,4 @@
+import org.gradle.kotlin.dsl.dependencies
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
@@ -11,10 +12,21 @@ plugins {
 kotlin {
 
     android {
-        compileSdk = libs.versions.compileSdk.get().toInt()
+        compileSdk = 36
         namespace = "com.splitbill.kmp"
         compilerOptions {
             jvmTarget = JvmTarget.JVM_11 // Max supported version for Android
+        }
+    }
+
+    listOf(
+        iosX64(),
+        iosArm64(),
+        iosSimulatorArm64()
+    ).forEach { iosTarget ->
+        iosTarget.binaries.framework {
+            baseName = "kmp"
+            isStatic = true
         }
     }
 
@@ -32,10 +44,17 @@ kotlin {
             implementation(libs.compose.material3)
             implementation(libs.compose.navigation3.ui)
             implementation(libs.compose.components.resources)
+            implementation(libs.ui.tooling.preview)
         }
 
         jvmMain.dependencies {
             implementation(compose.desktop.currentOs)
+        }
+        val androidMain by getting {
+            dependencies {
+                implementation(libs.ui.tooling.preview)
+                implementation(libs.ui.tooling)
+            }
         }
 
         commonTest.dependencies {
