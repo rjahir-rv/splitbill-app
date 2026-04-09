@@ -1,4 +1,3 @@
-import org.gradle.kotlin.dsl.dependencies
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
@@ -16,6 +15,9 @@ kotlin {
         namespace = "com.splitbill.kmp"
         compilerOptions {
             jvmTarget = JvmTarget.JVM_11 // Max supported version for Android
+        }
+        androidResources{
+            enable = true
         }
     }
 
@@ -50,27 +52,13 @@ kotlin {
         jvmMain.dependencies {
             implementation(compose.desktop.currentOs)
         }
-        val androidMain by getting {
-            dependencies {
-                implementation(libs.ui.tooling.preview)
-                implementation(libs.ui.tooling)
-            }
+        androidMain.dependencies {
+            implementation(libs.ui.tooling.preview)
+            implementation(libs.ui.tooling)
         }
 
         commonTest.dependencies {
             implementation(kotlin("test"))
         }
-    }
-}
-
-compose.resources {
-    publicResClass = true
-    packageOfResClass = "com.splitbill.kmp"
-    generateResClass = always
-}
-
-compose.desktop {
-    application {
-        mainClass = "com.splitbill.kmp.MainKt"
     }
 }
