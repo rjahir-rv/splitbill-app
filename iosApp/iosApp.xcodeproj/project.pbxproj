@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		1D404366DE1AA965C0D51FBB /* KotlinProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KotlinProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D404366DE1AA965C0D51FBB /* Splitbill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Splitbill.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -50,7 +50,7 @@
 		7D16D1B1B947392BCC8039AE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D404366DE1AA965C0D51FBB /* KotlinProject.app */,
+				1D404366DE1AA965C0D51FBB /* Splitbill.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -87,7 +87,7 @@
 			packageProductDependencies = (
 			);
 			productName = iosApp;
-			productReference = 1D404366DE1AA965C0D51FBB /* KotlinProject.app */;
+			productReference = 1D404366DE1AA965C0D51FBB /* Splitbill.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
